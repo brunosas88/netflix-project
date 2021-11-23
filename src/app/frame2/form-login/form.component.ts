@@ -36,9 +36,8 @@ export class FormComponent implements OnInit {
 		this.password = this.formContainer['controls']['passwordUser']['value'];
 		this.formService.login(this.user, this.password).subscribe( data => {
 			console.log(data);
-		// }, erro => {
-		// 	console.log(erro.error.text);
-		// }
+		}, erro => {
+			console.log(erro.error.text);
 		})
 	}
 

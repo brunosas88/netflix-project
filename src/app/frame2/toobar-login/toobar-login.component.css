@@ -1,0 +1,12 @@
+header {
+	width: 100vw;
+}
+
+header figure {
+	margin: 0;
+}
+
+header img {
+	width: 165px;
+	margin-left: 3vw;
+}
