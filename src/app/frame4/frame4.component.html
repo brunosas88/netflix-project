@@ -7,13 +7,9 @@
 	<div class="viewFrame4">
 		<p>Quem está assistindo?</p>
 		<div class="userFrame4">
-			<figure>
-				<img src="" alt="">
-				<figcaption>Usuário 1</figcaption>
-			</figure>
-			<figure>
-				<img src="" alt="">
-				<figcaption>Usuário 1</figcaption>
+			<figure *ngFor="let item of dataUser.users ">
+				<img src= {{item.avatarUrl}} alt=" Avatar de {{item.name}} " (click)="getUserId(item.id)">
+				<figcaption> {{item.name}} </figcaption>
 			</figure>
 		</div>
 	</div>

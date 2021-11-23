@@ -15,7 +15,6 @@
 header {
 	display: flex;
 	width: 100%;
-	margin-bottom: 5vw;
 }
 
 header figure {
@@ -29,7 +28,7 @@ header img {
 }
 
 p {
-	font-size: 36px;
+	font-size: 46px;
 	font-family: 'Martel Sans', sans-serif;
 	text-align: center;
 }
@@ -43,24 +42,24 @@ p:hover {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	margin-top: 90px;
+	width: 90%;
 }
 
 .userFrame4 {
 	display: flex;
-	justify-content: space-between;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
 	align-items: center;
-	width: 80%;
+	max-width: 80%;
 }
 
-.userFrame4 figure {
-	margin: 0;
-}
 
 .userFrame4 img {
-	width: 120px;
-	height: 120px;
+	width: 145px;
+	height: 145px;
 	background-color: tomato;
-	border-radius: 5px;
+	border-radius: 8px;
 	border: 3px black solid;
 }
 
@@ -73,12 +72,8 @@ p:hover {
 	opacity: 100%;
 }
 
-.userFrame4 figcaption:hover + img {
-	border: 3px white solid;
-
-}
-
 .userFrame4 figcaption {
 	text-align: center;
 	opacity: 50%;
+	font-size: larger;
 }
