@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { FormService } from './form.service';
+import { FormLoginService } from './form-login.service';
 
-describe('FormService', () => {
-  let service: FormService;
+describe('FormLoginService', () => {
+  let service: FormLoginService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(FormService);
+    service = TestBed.inject(FormLoginService);
   });
 
   it('should be created', () => {

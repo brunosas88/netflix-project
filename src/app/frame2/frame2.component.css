@@ -6,7 +6,8 @@
 	flex-direction: column;
 	font-family: 'Martel Sans', sans-serif;
 	align-items: center;
-	width: 100%;
+	width: 100vw;
+	height: 100vh;
 	background-image: url(/assets/netflix_background.png) ;
 	background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
@@ -22,8 +23,6 @@
 	margin-bottom: 15.5px;
 
 }
-
-
 
 .formFrame2 {
 	background-color: rgba(0, 0, 0, 0.75);

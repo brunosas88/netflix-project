@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { FormService } from './form.service';
+import { FormLoginService } from './form-login.service';
 
 @Component({
-  selector: 'app-form',
-  templateUrl: './form.component.html',
-  styleUrls: ['./form.component.css']
+  selector: 'app-form-login',
+  templateUrl: './form-login.component.html',
+  styleUrls: ['./form-login.component.css']
 })
-export class FormComponent implements OnInit {
+export class FormLoginComponent implements OnInit {
 
   formContainer = new FormGroup({
 		emailPhone: new FormControl(''),
@@ -17,7 +17,7 @@ export class FormComponent implements OnInit {
 	textShow: boolean = true;
 	user: string = '';
 	password: string = '';
-	constructor(private fb: FormBuilder, private formService: FormService) { }
+	constructor(private fb: FormBuilder, private formLoginService: FormLoginService) { }
 
 	ngOnInit(): void {
 		this.formContainer = this.fb.group({
@@ -34,7 +34,7 @@ export class FormComponent implements OnInit {
 	getInfo() {
 		this.user =  this.formContainer['controls']['emailPhoneUser']['value'];
 		this.password = this.formContainer['controls']['passwordUser']['value'];
-		this.formService.login(this.user, this.password).subscribe( data => {
+		this.formLoginService.login(this.user, this.password).subscribe( data => {
 			console.log(data);
 		}, erro => {
 			console.log(erro.error.text);
