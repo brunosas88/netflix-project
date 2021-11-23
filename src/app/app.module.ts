@@ -3,14 +3,22 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { Frame4Component } from './frame4/frame4.component';
+import { HttpClientModule } from '@angular/common/http';
+import { Frame2Component } from './frame2/frame2.component';
+import { FooterLoginComponent } from './frame2/footer-login/footer-login.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    Frame4Component,
+    Frame2Component,
+    FooterLoginComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+		HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
