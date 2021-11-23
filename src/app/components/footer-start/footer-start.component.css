@@ -1,0 +1,40 @@
+main {
+    background-color: var(--black-color);
+    padding: 70px 8vw;
+    
+}
+
+h3 {
+    color: var(--gray-color);
+    font-weight: 400;
+    font-size: 26px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--gray-color);
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand {
+    margin-top: 45px;
+}
+
+.brand p {
+    color: var(--gray-color);
+    font-weight: 400;
+    font-size: 18px;
+}
