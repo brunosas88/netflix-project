@@ -48,8 +48,12 @@ input::placeholder {
 	color: #8c8c8c;
 }
 
-input:focus {
+/* input:focus {
 	border: 1px solid #333333;
+} */
+
+.invalidInput {
+	border-bottom: 2px solid #F28300;
 }
 
 button {

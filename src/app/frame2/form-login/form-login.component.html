@@ -5,6 +5,8 @@
 			<input type="text"
 							placeholder="Email ou número de telefone"
 							formControlName="emailPhoneUser"
+							[class.invalidInput] = "formContainer['controls']['emailPhoneUser']['status'] === 'INVALID' &&
+							formContainer['controls']['emailPhoneUser']['touched']"
 			/>
 			<p class="warning"*ngIf="formContainer['controls']['emailPhoneUser']['status'] === 'INVALID' &&
 					formContainer['controls']['emailPhoneUser']['touched']" >
@@ -12,7 +14,8 @@
 			</p>
 		</div>
 		<div class="container-input">
-			<input type="password" placeholder="Senha" formControlName="passwordUser"/>
+			<input type="password" placeholder="Senha" formControlName="passwordUser" [class.invalidInput] = "formContainer['controls']['passwordUser']['status'] === 'INVALID' &&
+			formContainer['controls']['passwordUser']['touched']" />
 			<p class="warning" *ngIf="formContainer['controls']['passwordUser']['status'] === 'INVALID' &&
 				formContainer['controls']['passwordUser']['touched']" >
 			A senha deve ter entre 4 e 60 caracteres.
