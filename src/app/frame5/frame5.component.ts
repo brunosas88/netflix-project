@@ -8,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class Frame5Component implements OnInit {
 
   liBold: boolean = false
+  user: number = 0
+  userName: string = ''
+
 
   constructor() { }
 
   ngOnInit(): void {
+    this.user = 1
+    this.userName = 'Usuário 1'
   }
 
 }
