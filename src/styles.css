@@ -12,3 +12,7 @@
     --green-color: #46D369;
     --yellow-color: #EBC500;
   }
+
+  body {
+    margin: 0;
+  }
