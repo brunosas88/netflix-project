@@ -34,10 +34,14 @@ export class FormLoginComponent implements OnInit {
 	getInfo() {
 		this.user =  this.formContainer['controls']['emailPhoneUser']['value'];
 		this.password = this.formContainer['controls']['passwordUser']['value'];
-		this.formLoginService.login(this.user, this.password).subscribe( data => {
+		this.formLoginService.login(this.user, this.password).subscribe({
+		  next: data => {
 			console.log(data);
-		}, erro => {
+			localStorage.setItem('data', data)
+			}
+			, error: erro => {
 			console.log(erro.error.text);
+		}
 		})
 	}
 

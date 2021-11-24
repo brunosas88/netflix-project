@@ -8,9 +8,9 @@ export class FormLoginService {
 
   url: string = 'http://private-3923c4-santandercoders809.apiary-mock.com/login';
 	dataUser: object = {};
-	httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-  }
+	// httpOptions = {
+  //   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  // }
 
   constructor(private http: HttpClient) {}
 
@@ -19,6 +19,7 @@ export class FormLoginService {
 			email: user,
 			senha: password
 		}
-		return this.http.post(this.url, JSON.stringify(this.dataUser), this.httpOptions);
+		console.log(this.dataUser);
+		return this.http.post(this.url, this.dataUser, {responseType:'text'});
 	}
 }

@@ -16,8 +16,10 @@
 			</p>
 		</div>
 		<div class="container-input">
-			<input type="password" placeholder="Senha" formControlName="passwordUser" [class.invalidInput] = "formContainer['controls']['passwordUser']['status'] === 'INVALID' &&
-			formContainer['controls']['passwordUser']['touched']" />
+			<input type="password" placeholder="Senha"
+						 formControlName="passwordUser"
+						 [class.invalidInput] = "formContainer['controls']['passwordUser']['status'] === 'INVALID' &&
+						 formContainer['controls']['passwordUser']['touched']" />
 			<p class="warning" *ngIf="formContainer['controls']['passwordUser']['status'] === 'INVALID' &&
 				formContainer['controls']['passwordUser']['touched']" >
 			A senha deve ter entre 4 e 60 caracteres.
