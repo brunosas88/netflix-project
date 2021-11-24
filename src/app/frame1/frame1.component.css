@@ -17,7 +17,7 @@ main {
 }
 
 .container img {
-    width: 165px;
+    height: 93px;
 }
 
 .containerTop h1 {
@@ -90,7 +90,11 @@ main {
 
 @media only screen and (max-width: 950px) {
     .containerTop {
-        height: 50vh;
+        height: 709px;
+    }
+
+    .containerTop img {
+        height: 80px;
     }
 
     .contentTop h1 {
@@ -108,5 +112,49 @@ main {
     .contentTop h3 {
         font-size: 23px;
         line-height: 26px;
+    } 
+
+    .contentTop button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        width: 81px;
+        font-size: 18px;
+        padding: 0 16px;
+
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    /* main {
+        min-width: 375px;
+    } */
+
+    .containerTop {
+        height: 519px;
+    }
+
+    .containerTop img {
+        height: 60px;
+    }
+
+    .contentTop h1 {
+        font-size: 28px;
+        line-height: 30px;
+        font-weight: 700;
+    }
+
+    .contentTop h2 {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 23px;
+        margin: 16px 0;
+    }
+
+    .contentTop h3 {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 23px;
     } 
 }
