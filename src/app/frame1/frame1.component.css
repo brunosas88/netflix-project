@@ -8,14 +8,11 @@ main {
     padding: 30px 5.5vw;
     background-color: var(--black-color);
     background-image: url("../../assets/netflix_background.png");
-    /* background-repeat: no-repeat, repeat; */
-    /* background: url("../../assets/netflix_background.png") no-repeat center center fixed;  */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    /* width: 100vw; */
-    height: calc(100vh - 60px);
+    height: 809px;
     color: var(--very-light-gray-color);
 }
 
@@ -29,8 +26,11 @@ main {
 
 .contentTop {
     display: flex;
+    align-items: center;
     flex-direction: column;
     align-items: center;
+    height: 100%;
+    margin-top: 63px;
 }
 
 .contentTop h1 {

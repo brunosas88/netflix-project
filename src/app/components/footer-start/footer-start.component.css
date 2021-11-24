@@ -1,10 +1,6 @@
 main {
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* align-items: center; */
     background-color: var(--black-color);
     padding: 70px 8vw;
-    
 }
 
 h3 {
@@ -25,11 +21,8 @@ a {
 
 .container {
     display: flex;
-    /* background-color: blue; */
     flex-direction: row;
     flex-wrap: wrap;
-    /* justify-content: space-between; */
-    /* justify-content: center; */
     margin-top: 20px;
     column-gap: 15px;
     max-width: 1200px;
@@ -38,10 +31,8 @@ a {
 .col {
     display: flex;
     flex-direction: column;
-    /* padding-right: 5vw; */
     min-width: 268px;
     width: 23%;
-    background-color: coral;
 }
 
 .col a {
@@ -58,9 +49,3 @@ a {
     font-size: 18px;
 }
 
-@media only screen and (max-width: 950px) {
-    .container {
-        /* background-color: brown; */
-        /* justify-content: center; */
-    }
-}

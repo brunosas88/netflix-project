@@ -7,7 +7,6 @@
     padding: 0 8vw;
     height: 472px;
     column-gap: 3%;
-    /* background-color: darkgreen; */
     max-width: 1300px;
 }
 
@@ -16,7 +15,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* background-color: crimson; */
     height: 472px;
 }
 
@@ -25,8 +23,6 @@
     align-items: center;
     justify-content: end;
     width: 47%;
-    /* max-width: 570px; */
-    /* background-color: cyan; */
 }
 
 .right img {
@@ -48,11 +44,9 @@ h2 {
 
 @media only screen and (max-width: 950px) {
     .content {
-        /* background-color: blue; */
         flex-direction: column;
         column-gap: 0;
         height: auto;
-        /* margin: 36px 0; */
         padding: 70px 45px;
     }
 
@@ -61,7 +55,6 @@ h2 {
         height: auto;
         justify-content: center;
         align-items: center;
-        /* background-color: brown; */
     }
 
     .left  h1 {
@@ -76,7 +69,6 @@ h2 {
 
     .right {
         width: 100%;
-        /* background-color: coral; */
         justify-content: center;
     }
 }
