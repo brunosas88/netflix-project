@@ -14,13 +14,15 @@ export class Frame4Component implements OnInit {
     token: "",
     users: []
 	}
-	
+
 	selectedUserId: number = 0
 
   constructor(private frame4Service: Frame4Service) { }
 
   ngOnInit(){
-		this.dataUser = this.frame4Service.postRequest()
+
+		this.dataUser = localStorage.getItem('data')
+		console.log(this.dataUser)
   }
 
 	getUserId(n:number) {
