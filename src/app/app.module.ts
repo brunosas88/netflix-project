@@ -7,7 +7,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { FormLoginComponent } from './frame2/form-login/form-login.component';
-import { Frame4Component } from './frame4/frame4.component';
 import { Frame2Component } from './frame2/frame2.component';
 import { FooterLoginComponent } from './frame2/footer-login/footer-login.component';
 import { ToobarLoginComponent } from './frame2/toobar-login/toobar-login.component';
@@ -17,7 +16,6 @@ import { ToobarLoginComponent } from './frame2/toobar-login/toobar-login.compone
   declarations: [
     AppComponent,
     FormLoginComponent,
-    Frame4Component,
     Frame2Component,
 		FooterLoginComponent,
   	ToobarLoginComponent,
