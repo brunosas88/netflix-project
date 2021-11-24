@@ -36,8 +36,8 @@ export class FormLoginComponent implements OnInit {
 		this.password = this.formContainer['controls']['passwordUser']['value'];
 		this.formLoginService.login(this.user, this.password).subscribe({
 		  next: data => {
-			console.log(data);
-			localStorage.setItem('data', data)
+			console.log(JSON.parse(data));
+			localStorage.setItem('data', JSON.parse(data));
 			}
 			, error: erro => {
 			console.log(erro.error.text);
