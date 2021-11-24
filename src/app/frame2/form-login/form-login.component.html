@@ -1,5 +1,7 @@
 <div class="container-main">
+
 	<form [formGroup]="formContainer">
+
 		<h1>Entrar</h1>
 		<div class="container-input">
 			<input type="text"
@@ -21,7 +23,7 @@
 			A senha deve ter entre 4 e 60 caracteres.
 		</p>
 		</div>
-		<button type="button" (click)="getInfo()"> Entrar </button>
+		<div class="buttonForm"><button type="button" (click)="getInfo()"> Entrar </button></div>
 		<p>
 			Esta página é protegida pelo Google reCAPTCHA para garantir que você não é
 			um robô. <span (click)="showMessage()" *ngIf="textShow; else otherwise"> Saiba mais </span>.
