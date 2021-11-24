@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Frame5Component implements OnInit {
 
+  liBold: boolean = false
+
   constructor() { }
 
   ngOnInit(): void {
