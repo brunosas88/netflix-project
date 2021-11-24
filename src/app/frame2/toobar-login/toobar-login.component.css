@@ -4,9 +4,11 @@ header {
 
 header figure {
 	margin: 0;
+	margin-top: 45px;
+	margin-left: 80px;
 }
 
 header img {
 	width: 165px;
-	margin-left: 3vw;
+	/* margin-left: 3vw; */
 }

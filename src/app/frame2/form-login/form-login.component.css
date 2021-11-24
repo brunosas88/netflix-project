@@ -38,6 +38,8 @@ input {
 	background-color: #333333;
 	color: #8c8c8c;
 	padding-left: 15px;
+	outline: none;
+	border: none;
 }
 
 input::placeholder {
