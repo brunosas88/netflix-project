@@ -31,7 +31,6 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 .contentTop h1 {
@@ -80,4 +79,34 @@ main {
 
 .btnEntrar {
     margin-top: 50px;
+}
+
+.content {
+    background-color: var(--black-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media only screen and (max-width: 950px) {
+    .containerTop {
+        height: 50vh;
+    }
+
+    .contentTop h1 {
+        font-size: 50px;
+        line-height: 55px;
+        font-weight: 700;
+    }
+
+    .contentTop h2 {
+        font-size: 26px;
+        line-height: 30px;
+        margin: 16px 0;
+    }
+
+    .contentTop h3 {
+        font-size: 23px;
+        line-height: 26px;
+    } 
 }
