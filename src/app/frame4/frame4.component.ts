@@ -7,7 +7,6 @@ import { Frame4Service } from './frame4.service';
 	templateUrl: './frame4.component.html',
 	styleUrls: ['./frame4.component.css'],
 })
-
 export class Frame4Component implements OnInit {
 	dataUser: LoginData = {
 		token: '',
@@ -24,6 +23,6 @@ export class Frame4Component implements OnInit {
 
 	getUserId(n: number) {
 		this.selectedUser = JSON.stringify(this.dataUser.users[n - 1]);
-		return localStorage.setItem('user',this.selectedUser)
+		return localStorage.setItem('user', this.selectedUser);
 	}
 }
