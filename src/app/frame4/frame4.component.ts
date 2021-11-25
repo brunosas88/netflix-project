@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { DataRequested, Frame4Service } from './frame4.service';
+import { DataRequested } from './frame4.model';
+import { Frame4Service } from './frame4.service';
 
 @Component({
   selector: 'app-frame4',
@@ -15,14 +16,16 @@ export class Frame4Component implements OnInit {
     users: []
 	}
 
+	test: string = ''
+
 	selectedUserId: number = 0
 
   constructor(private frame4Service: Frame4Service) { }
 
   ngOnInit(){
-
-		this.dataUser = localStorage.getItem('data')
-		console.log(this.dataUser)
+		// this.test = JSON.parse(localStorage.getItem('data'))
+		// this.dataUser = JSON.parse(this.test)
+		// console.log(this.dataUser)
   }
 
 	getUserId(n:number) {
