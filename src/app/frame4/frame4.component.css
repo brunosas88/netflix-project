@@ -7,30 +7,34 @@
 	justify-content: center;
 	align-items: center;
 	color: white;
-	/* padding-bottom: 25vw; */
 	font-family: 'Martel Sans', sans-serif;
 	width: 100vw;
 	height: 100vh;
+	position: relative;
 }
 
 header {
-	display: flex;
 	width: 100%;
+	position: absolute;
+	top:0;
+	left: 0;
 }
 
 header figure {
-	margin-left: 70px;
+	margin-left: 5.9vw;
+	margin-top: 53px;
 }
 
 header img {
-	width: 145px;
-	height: 78px;
+	width: 165px;
 }
 
 p {
-	font-size: 46px;
+	font-size: 3.5vw;
 	font-family: 'Martel Sans', sans-serif;
 	text-align: center;
+	margin: 2vw;
+	line-height: 0;
 }
 
 p:hover {
@@ -42,8 +46,9 @@ p:hover {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	margin-top: 90px;
+	/* padding-top: 15vw; */
 	width: 90%;
+	/* height: 31vw; */
 }
 
 .userFrame4 {
@@ -81,4 +86,16 @@ p:hover {
 @media screen and (min-width: 836px) and (max-width: 1920px) {
 
 
+}
+
+@media screen and (min-width: 1465px) {
+	header figure {
+		margin-left: 86.376px;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	p {
+		font-size: 28px;
+	}
 }
