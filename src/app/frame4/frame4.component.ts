@@ -1,34 +1,29 @@
-
 import { Component, OnInit } from '@angular/core';
 import { LoginData } from '../core/models/login-data.model';
 import { Frame4Service } from './frame4.service';
 
 @Component({
-  selector: 'app-frame4',
-  templateUrl: './frame4.component.html',
-  styleUrls: ['./frame4.component.css']
+	selector: 'app-frame4',
+	templateUrl: './frame4.component.html',
+	styleUrls: ['./frame4.component.css'],
 })
 
 export class Frame4Component implements OnInit {
-
 	dataUser: LoginData = {
-    token: "",
-    users: []
+		token: '',
+		users: [],
+	};
+
+	selectedUser: string = '';
+
+	constructor(private frame4Service: Frame4Service) {}
+
+	ngOnInit() {
+		this.dataUser = JSON.parse(localStorage.getItem('data') || '{}');
 	}
 
-	test: string = ''
-
-	selectedUserId: number = 0
-
-  constructor(private frame4Service: Frame4Service) { }
-
-  ngOnInit(){
-		this.dataUser = JSON.parse(localStorage.getItem('data') || '{}')
-  }
-
-	getUserId(n:number) {
-		this.selectedUserId = n;
-		console.log(this.selectedUserId)
+	getUserId(n: number) {
+		this.selectedUser = JSON.stringify(this.dataUser.users[n - 1]);
+		return localStorage.setItem('user',this.selectedUser)
 	}
-
 }
