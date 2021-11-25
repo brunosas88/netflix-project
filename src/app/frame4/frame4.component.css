@@ -16,7 +16,7 @@
 header {
 	width: 100%;
 	position: absolute;
-	top:0;
+	top: 0;
 	left: 0;
 }
 
@@ -26,7 +26,7 @@ header figure {
 }
 
 header img {
-	width: 165px;
+	width: 165px; /* 165px*/
 }
 
 p {
@@ -35,6 +35,8 @@ p {
 	text-align: center;
 	margin: 2vw;
 	line-height: 0;
+	margin-bottom: 2.5vw;
+	word-break: break-word;
 }
 
 p:hover {
@@ -46,9 +48,9 @@ p:hover {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	/* padding-top: 15vw; */
+	/* margin-top: 18.5vw; */
+	margin-top: 270px;
 	width: 90%;
-	/* height: 31vw; */
 }
 
 .userFrame4 {
@@ -57,12 +59,13 @@ p:hover {
 	justify-content: space-evenly;
 	align-items: center;
 	max-width: 80%;
+	/* padding-top: 3.5vw; */
+	padding-top: 50px;
 }
 
 .userFrame4 img {
-	width: 145px;
-	height: 145px;
-	background-color: tomato;
+	width: 10.725vw; /* 145px*/
+	height: 10.725vw;
 	border-radius: 8px;
 	border: 3px black solid;
 }
@@ -82,10 +85,17 @@ p:hover {
 	font-size: larger;
 }
 
-/* min-width & max-width */
-@media screen and (min-width: 836px) and (max-width: 1920px) {
+@media screen and (max-width: 950px) {
+	header img {
+		width: 17.5vw; /*12.1vw for default*/
+	}
+}
 
-
+@media screen and (min-width: 1920px) {
+	.userFrame4 img {
+		width: 205.875px;
+		height: 205.875px;
+	}
 }
 
 @media screen and (min-width: 1465px) {
@@ -97,5 +107,16 @@ p:hover {
 @media screen and (max-width: 800px) {
 	p {
 		font-size: 28px;
+	}
+
+	.userFrame4 img {
+		width: 85.792px; /* 145px*/
+		height: 85.792px;
+	}
+}
+
+@media screen and (min-width: 1465px) {
+	header figure {
+		margin-left: 86.376px;
 	}
 }
