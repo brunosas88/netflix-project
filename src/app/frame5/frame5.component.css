@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 
 .frame5 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Martel Sans', sans-serif;
+  font-family: "Martel Sans", sans-serif;
   /* background-image: url(/assets/frame_5_background.png) ;
 	background-position: center;
   background-repeat: no-repeat;
@@ -27,7 +27,7 @@
   max-width: 1440px;
   padding-left: 80px;
   box-sizing: border-box;
-  z-index: -1;
+
 }
 
 .backgroundFrame5 {
@@ -35,31 +35,30 @@
   position: absolute;
   width: 1440px;
   height: 100vw;
-  z-index: -100000;
+  z-index: -2;
 }
 
 header {
-	width: 100%;
+  width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
 }
 
 header figure {
-	margin: 0;
+  margin: 0;
   padding-top: 50px;
   padding-right: 65px;
 }
 
 header img {
-	width: 165px;
+  width: 165px;
 }
 
 header ul {
   padding: 0;
-  display:flex
+  display: flex;
 }
-
 
 .liHeader {
   list-style: none;
@@ -102,7 +101,7 @@ header ul {
 }
 
 .topToday h5 {
-  background-color: #E50914;
+  background-color: #e50914;
   width: 40px;
   font-weight: 800;
   border-radius: 5px;
@@ -139,7 +138,7 @@ header ul {
 
 #watchBtt {
   background-color: white;
-  font-family: 'Martel Sans', sans-serif;
+  font-family: "Martel Sans", sans-serif;
   border: none;
   border-radius: 10px;
   width: 180px;
@@ -163,11 +162,12 @@ header ul {
 }
 
 #watchBtt:hover {
-  background-color: #9A9A9A;
+  background-color: #9a9a9a;
+  cursor: pointer;
 }
 
 #moreInfoBtt {
-  font-family: 'Martel Sans', sans-serif;
+  font-family: "Martel Sans", sans-serif;
   width: 314px;
   border-radius: 10px;
   border: none;
@@ -189,6 +189,7 @@ header ul {
 
 #moreInfoBtt:hover {
   background-color: #414141;
+  cursor: pointer;
 }
 
 .popularNetflix {
@@ -205,9 +206,4 @@ header ul {
   height: 121px;
   width: 100%;
   background-color: tomato;
-
 }
-
-
-
-

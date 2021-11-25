@@ -1,16 +1,22 @@
 <div class="frame5">
   <div class="backgroundImage">
-    <img src="/assets/frame_5_background.png" alt="">
+    <img src="/assets/frame_5_background.png" alt="" />
   </div>
-  <div class="backgroundFrame5"></div>
+  <!-- <div class="backgroundFrame5"></div> -->
   <div class="container">
     <header>
       <figure>
-        <img src="/assets/netflix-Logo_v2.png" alt="Netflix Logo">
+        <img src="/assets/netflix-Logo_v2.png" alt="Netflix Logo" />
       </figure>
       <nav>
         <ul>
-          <li class="liHeader firstLi" (focus)=" !liBold " [class.liBold] = "liBold" >Início</li>
+          <li
+            class="liHeader firstLi"
+            (focus)="(!liBold)"
+            [class.liBold]="liBold"
+          >
+            Início
+          </li>
           <li class="liHeader">Séries</li>
           <li class="liHeader">Filmes</li>
           <li class="liHeader">Bombando</li>
@@ -20,15 +26,18 @@
     </header>
     <div class="contentFrame5">
       <div class="movieTitle">
-        <img src="/assets/movie_title.png" alt="">
+        <img src="/assets/movie_title.png" alt="" />
       </div>
       <div class="topToday">
         <h5>TOP 10</h5>
         <h2>Brasil: top 2 de hoje</h2>
       </div>
       <div class="synopsis">
-        <p>Um agente do FBI persegue o ladrão de arte mais procurado do mundo.
-          Ele só não esperava ter seu alvo como parceiro para prender uma bandida muito esperta.</p>
+        <p>
+          Um agente do FBI persegue o ladrão de arte mais procurado do mundo.
+          Ele só não esperava ter seu alvo como parceiro para prender uma
+          bandida muito esperta.
+        </p>
       </div>
       <div class="buttons">
         <button type="button" id="watchBtt">Assistir</button>
@@ -39,10 +48,9 @@
         <div class="dummy"></div>
       </div>
       <div class="keepWatching">
-        <h2>Continuar assistindo como {{userName}} </h2>
+        <h2>Continuar assistindo como {{ userName }}</h2>
         <div class="dummy"></div>
       </div>
     </div>
   </div>
-
 </div>
