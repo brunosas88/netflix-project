@@ -33,13 +33,13 @@ export class FormLoginComponent implements OnInit {
 				Validators.compose([
 					Validators.required,
 					Validators.pattern(
-						/^(\d{11}|\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3}))$/,
+						/^([\d]{11}|\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3}))$/,
 					),
 				]),
 			],
 			passwordUser: [
 				'',
-				Validators.compose([Validators.required, Validators.minLength(4)]),
+				Validators.compose([Validators.required, Validators.minLength(4), Validators.maxLength(60)]),
 			],
 		});
 	}
@@ -51,7 +51,7 @@ export class FormLoginComponent implements OnInit {
 	getInfo() {
 		this.user = this.formContainer['controls']['emailPhoneUser']['value'];
 		this.password = this.formContainer['controls']['passwordUser']['value'];
-		this.formLoginService.login(this.user, this.password).subscribe({
+		this.formLoginService.login({user: this.user, password:this.password}).subscribe({
 			next: (data) => {
 				console.log(JSON.parse(data));
 				localStorage.setItem('data', data);

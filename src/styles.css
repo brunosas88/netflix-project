@@ -11,6 +11,9 @@
     --orange-color: #F28300;
     --green-color: #46D369;
     --yellow-color: #EBC500;
+		--background-color: rgba(0, 0, 0, 0.75);
+		--medium-gray-color: #8c8c8c;
+		--blue-color: #0080ff;
   }
 
 	body {
