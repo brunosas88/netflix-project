@@ -1,5 +1,4 @@
 header {
-  width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
@@ -26,19 +25,26 @@ header ul {
   margin-right: 35px;
   font-size: 24px;
   color: white;
-  font-weight: 200;
+  font-weight: 300;
   white-space: nowrap;
 }
-.liHeader:hover {
-  font-weight: 700;
+.liHeaderSecond:hover {
+  transition: 0.5s;
   cursor: pointer;
-}
-
-.liBold {
-  font-weight: 700;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .firstLi {
   font-weight: 700;
 }
 
+.firstLi:hover {
+  cursor: default;
+}
+
+@media screen and (min-width: 1500px) {
+  header figure {
+    padding-left: 90px;
+    /* margin: 10vw; */
+  }
+}
