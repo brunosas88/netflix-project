@@ -1,6 +1,6 @@
-import { HttpClient } from '@angular/common/http';
+
 import { Component, OnInit } from '@angular/core';
-import { DataRequested } from './frame4.model';
+import { LoginData } from '../core/models/login-data.model';
 import { Frame4Service } from './frame4.service';
 
 @Component({
@@ -11,7 +11,7 @@ import { Frame4Service } from './frame4.service';
 
 export class Frame4Component implements OnInit {
 
-	dataUser: DataRequested = {
+	dataUser: LoginData = {
     token: "",
     users: []
 	}
