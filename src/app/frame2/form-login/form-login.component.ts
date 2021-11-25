@@ -1,30 +1,47 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import {
+	FormBuilder,
+	FormControl,
+	FormGroup,
+	Validators,
+} from '@angular/forms';
 import { FormLoginService } from './form-login.service';
 
 @Component({
-  selector: 'app-form-login',
-  templateUrl: './form-login.component.html',
-  styleUrls: ['./form-login.component.css']
+	selector: 'app-form-login',
+	templateUrl: './form-login.component.html',
+	styleUrls: ['./form-login.component.css'],
 })
 export class FormLoginComponent implements OnInit {
-
-  formContainer = new FormGroup({
+	formContainer = new FormGroup({
 		emailPhone: new FormControl(''),
 		passwordUser: new FormControl(''),
-	})
+	});
 
 	textShow: boolean = true;
 	user: string = '';
 	password: string = '';
-	constructor(private fb: FormBuilder, private formLoginService: FormLoginService) { }
+	constructor(
+		private fb: FormBuilder,
+		private formLoginService: FormLoginService,
+	) {}
 
 	ngOnInit(): void {
 		this.formContainer = this.fb.group({
-      emailPhoneUser: ['',  Validators.compose([Validators.required,
-				Validators.pattern(/^(\d{11}|\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3}))$/)])],
-      passwordUser: ['', Validators.compose([Validators.required, Validators.minLength(4)])],
-    });
+			emailPhoneUser: [
+				'',
+				Validators.compose([
+					Validators.required,
+					Validators.pattern(
+						/^(\d{11}|\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3}))$/,
+					),
+				]),
+			],
+			passwordUser: [
+				'',
+				Validators.compose([Validators.required, Validators.minLength(4)]),
+			],
+		});
 	}
 
 	showMessage() {
@@ -32,17 +49,16 @@ export class FormLoginComponent implements OnInit {
 	}
 
 	getInfo() {
-		this.user =  this.formContainer['controls']['emailPhoneUser']['value'];
+		this.user = this.formContainer['controls']['emailPhoneUser']['value'];
 		this.password = this.formContainer['controls']['passwordUser']['value'];
 		this.formLoginService.login(this.user, this.password).subscribe({
-		  next: data => {
-			console.log(JSON.parse(data));
-			localStorage.setItem('data', JSON.parse(data));
-			}
-			, error: erro => {
-			console.log(erro.error.text);
-		}
-		})
+			next: (data) => {
+				console.log(JSON.parse(data));
+				localStorage.setItem('data', data);
+			},
+			error: (erro) => {
+				console.log(erro.error.text);
+			},
+		});
 	}
-
 }
