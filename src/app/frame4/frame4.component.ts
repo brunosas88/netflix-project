@@ -23,9 +23,7 @@ export class Frame4Component implements OnInit {
   constructor(private frame4Service: Frame4Service) { }
 
   ngOnInit(){
-		// this.test = JSON.parse(localStorage.getItem('data'))
-		// this.dataUser = JSON.parse(this.test)
-		// console.log(this.dataUser)
+		this.dataUser = JSON.parse(localStorage.getItem('data') || '{}')
   }
 
 	getUserId(n:number) {
