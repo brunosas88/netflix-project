@@ -1,0 +1,51 @@
+main {
+    background-color: var(--black-color);
+    padding: 70px 8vw;
+}
+
+h3 {
+    color: var(--gray-color);
+    font-weight: 400;
+    font-size: 26px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--gray-color);
+    font-weight: 400;
+    font-size: 18px;
+    padding-right: 12px;
+    margin-bottom: 16px;
+    white-space: normal;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    column-gap: 15px;
+    max-width: 1200px;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    min-width: 268px;
+    width: 23%;
+}
+
+.col a {
+    text-align: left;
+}
+
+.brand {
+    margin-top: 45px;
+}
+
+.brand p {
+    color: var(--gray-color);
+    font-weight: 400;
+    font-size: 18px;
+}
+
