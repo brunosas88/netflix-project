@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginData } from '../core/models/login-data.model';
-import { Frame4Service } from './frame4.service';
 
 @Component({
 	selector: 'app-frame4',
@@ -15,7 +14,7 @@ export class Frame4Component implements OnInit {
 
 	selectedUser: string = '';
 
-	constructor(private frame4Service: Frame4Service) {}
+	constructor() {}
 
 	ngOnInit() {
 		this.dataUser = JSON.parse(localStorage.getItem('data') || '{}');
