@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./frame5.component.css'],
 })
 export class Frame5Component implements OnInit {
-  liBold: boolean = false;
   user: number = 0;
   userName: string = '';
 

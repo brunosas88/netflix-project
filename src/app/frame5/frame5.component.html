@@ -3,27 +3,9 @@
     <img src="/assets/frame_5_background.png" alt="" />
   </div>
   <div class="backgroundFrame5"></div>
+  <app-navbar></app-navbar>
   <div class="container">
-    <header>
-      <figure>
-        <img src="/assets/netflix-Logo_v2.png" alt="Netflix Logo" />
-      </figure>
-      <nav>
-        <ul>
-          <li
-            class="liHeader firstLi"
-            (focus)="(!liBold)"
-            [class.liBold]="liBold"
-          >
-            Início
-          </li>
-          <li class="liHeader">Séries</li>
-          <li class="liHeader">Filmes</li>
-          <li class="liHeader">Bombando</li>
-          <li class="liHeader">Minha Lista</li>
-        </ul>
-      </nav>
-    </header>
+
     <div class="contentFrame5">
       <div class="movieTitle">
         <img src="/assets/movie_title.png" alt="" />
@@ -43,14 +25,14 @@
         <button type="button" id="watchBtt">Assistir</button>
         <button type="button" id="moreInfoBtt">Mais informações</button>
       </div>
-      <div class="popularNetflix">
+      <!-- <div class="popularNetflix">
         <h2>Populares na Netflix</h2>
         <div class="dummy"></div>
       </div>
       <div class="keepWatching">
         <h2>Continuar assistindo como {{ userName }}</h2>
         <div class="dummy"></div>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>
