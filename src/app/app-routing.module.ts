@@ -5,9 +5,10 @@ import { Frame2Component } from './frame2/frame2.component';
 import { Frame4Component } from './frame4/frame4.component';
 
 const routes: Routes = [
-	{ path: 'home', component: Frame1Component },
+	{ path: 'home', component: Frame1Component, },
 	{ path: 'login', component: Frame2Component },
 	{ path: 'user', component: Frame4Component },
+	{ path: '',   redirectTo: 'home', pathMatch: 'full' }
 ];
 
 @NgModule({
