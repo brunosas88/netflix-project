@@ -16,7 +16,7 @@ import { FooterStartComponent } from './components/footer-start/footer-start.com
 import { FormLoginComponent } from './login-page/form-login/form-login.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { FooterLoginComponent } from './login-page/footer-login/footer-login.component';
-import { ToobarLoginComponent } from './login-page/toobar-login/toobar-login.component';
+import { ToolbarComponent } from './shared/toolbar/toolbar.component';
 
 @NgModule({
 	declarations: [
@@ -26,7 +26,7 @@ import { ToobarLoginComponent } from './login-page/toobar-login/toobar-login.com
 		FormLoginComponent,
 		LoginPageComponent,
 		FooterLoginComponent,
-		ToobarLoginComponent,
+		ToolbarComponent,
 		HomePageComponent,
 		FooterComponent,
 		PromoListTextLeftComponent,

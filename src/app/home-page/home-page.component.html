@@ -1,11 +1,12 @@
 <main>
     <div class="containerTop">
-        <img src="../../assets/netflix-Logo.png" alt="Logo Netflix">
+			<app-toolbar></app-toolbar>
+        <!-- <img src="../../assets/netflix-Logo.png" alt="Logo Netflix"> -->
         <div class="contentTop">
             <h1>Filmes, séries e muito mais. Sem limites</h1>
             <h2>Assista onde quiser. Cancele quando quiser.</h2>
             <h3>Pronto para assistir? Clique no botão abaixo para ser redirecionado para tela de login.</h3>
-            <button class="btnEntrar" (click)="goToLogin()" >Entrar</button>
+            <button class="btnEntrar" routerLink="/login" >Entrar</button>
         </div>
     </div>
 

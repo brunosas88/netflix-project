@@ -25,7 +25,7 @@
 			A senha deve ter entre 4 e 60 caracteres.
 		</p>
 		</div>
-		<div class="buttonForm"><button type="button" routerLink="/user" (click)="getInfo()"> Entrar </button></div>
+		<div class="buttonForm"><button type="button" routerLink="/user" (click)="goToNextPage()"> Entrar </button></div>
 		<p>
 			Esta página é protegida pelo Google reCAPTCHA para garantir que você não é
 			um robô. <span (click)="showMessage()" *ngIf="textShow; else otherwise"> Saiba mais </span>.

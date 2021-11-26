@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+
 import {
 	FormBuilder,
 	FormControl,
 	FormGroup,
 	Validators,
 } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/auth/auth.service';
 import { FormLoginService } from './form-login.service';
 
 @Component({
@@ -13,6 +16,7 @@ import { FormLoginService } from './form-login.service';
 	styleUrls: ['./form-login.component.css'],
 })
 export class FormLoginComponent implements OnInit {
+
 	formContainer = new FormGroup({
 		emailPhone: new FormControl(''),
 		passwordUser: new FormControl(''),
@@ -24,6 +28,8 @@ export class FormLoginComponent implements OnInit {
 	constructor(
 		private fb: FormBuilder,
 		private formLoginService: FormLoginService,
+		private router: Router,
+		private authService: AuthService,
 	) {}
 
 	ngOnInit(): void {
@@ -52,7 +58,7 @@ export class FormLoginComponent implements OnInit {
 		this.textShow = false;
 	}
 
-	getInfo() {
+	goToNextPage() {
 		this.user = this.formContainer['controls']['emailPhoneUser']['value'];
 		this.password = this.formContainer['controls']['passwordUser']['value'];
 		this.formLoginService
@@ -60,10 +66,16 @@ export class FormLoginComponent implements OnInit {
 			.subscribe({
 				next: (data) => {
 					localStorage.setItem('data', data);
+					this.router.navigate([this.authService.intendedUrl]);
 				},
 				error: (erro) => {
 					console.log(erro.error.text);
 				},
 			});
 	}
+
+	validateEmailPhone() {
+
+	}
+
 }
