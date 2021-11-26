@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import Series from '../shared/models/series.model';
 import mockdata from './mockdata';
 
@@ -9,6 +9,7 @@ import mockdata from './mockdata';
 })
 export class SeriesModalComponent implements OnInit {
 	@Input() showModal: boolean = true;
+	@Output() toggleModal: EventEmitter<boolean> = new EventEmitter();
 	selectedSeries: Series = mockdata[0];
 
 	constructor() {}
@@ -23,6 +24,7 @@ export class SeriesModalComponent implements OnInit {
 
 	hideModal() {
 		this.showModal = false;
+		this.toggleModal.emit(this.showModal);
 	}
 
 	ratingBackgorund(rating: number) {

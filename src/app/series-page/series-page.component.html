@@ -55,5 +55,8 @@
 			</div>
 		</div>
 	</div>
-	<app-series-modal [showModal]="showModal"></app-series-modal>
+	<app-series-modal
+		[showModal]="showModal"
+		(hideModal)="hideModal(showModal)"
+	></app-series-modal>
 </div>

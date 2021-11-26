@@ -29,6 +29,10 @@ export class SeriesPageComponent implements OnInit {
 		this.showModal = true;
 	}
 
+	hideModal(value: boolean) {
+		this.showModal = value;
+	}
+
 	ngOnInit(): void {
 		this.selectedUser = JSON.parse(
 			localStorage.getItem('selectedUser') || '{}',
