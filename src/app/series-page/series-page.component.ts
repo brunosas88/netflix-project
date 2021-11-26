@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import UserSeriesInfo from '../shared/models/user-series-info.model';
-import { SeriesPageServices } from './frame5.service';
+import { SeriesPageServices } from './series-page.service';
 
 @Component({
 	selector: 'app-frame5',
-	templateUrl: './frame5.component.html',
-	styleUrls: ['./frame5.component.css'],
+	templateUrl: './series-page.component.html',
+	styleUrls: ['./series-page.component.css'],
 })
-export class Frame5Component implements OnInit {
+export class SeriesPageComponent implements OnInit {
 	constructor(private service: SeriesPageServices) {}
 
 	userSeriesInfo: UserSeriesInfo = {} as UserSeriesInfo;
