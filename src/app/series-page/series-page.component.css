@@ -197,14 +197,14 @@ a:visited {
 }
 
 .userPreferences div {
-	margin-top: 1.6vw; /*20px*/
-	margin-bottom: 4vw; /*40px*/
+	/*margin-top: 1.6vw; /*20px*/
+	/*margin-bottom: 4vw; /*40px*/
 	white-space: nowrap;
 }
 
 .series {
-	height: 9vw; /*121px*/
-	width: 100%;
+	/*height: 5vw; /*121px*/
+	/* width: 100%; */
 }
 
 @media screen and (min-width: 1500px) {

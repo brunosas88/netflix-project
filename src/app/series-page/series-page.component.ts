@@ -1,6 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { SelectControlValueAccessor } from '@angular/forms';
 import UserSeriesInfo from '../shared/models/user-series-info.model';
 import { SeriesPageServices } from './series-page.service';
+
+interface User {
+	id: number;
+	name: string;
+	avatarUrl: string;
+}
 
 @Component({
 	selector: 'app-frame5',
@@ -11,12 +18,18 @@ export class SeriesPageComponent implements OnInit {
 	constructor(private service: SeriesPageServices) {}
 
 	userSeriesInfo: UserSeriesInfo = {} as UserSeriesInfo;
-	user: number = 0;
-	userName: string = '';
+
+	selectedUser: User = {
+		id: 0,
+		name: '',
+		avatarUrl: '',
+	};
 
 	ngOnInit(): void {
-		this.user = 1;
-		this.userName = 'Usuário 1';
+		this.selectedUser = JSON.parse(
+			localStorage.getItem('selectedUser') || '{}',
+		);
+
 		this.service.getUserSeriesInfo().subscribe({
 			next: (data) => {
 				this.userSeriesInfo = data;
