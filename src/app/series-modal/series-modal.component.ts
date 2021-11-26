@@ -16,8 +16,9 @@ export class SeriesModalComponent implements OnInit {
 	ngOnInit(): void {}
 
 	renderModal(index: number) {
+		this.selectedSeries = mockdata[index];
+
 		this.showModal = true;
-		console.log(mockdata[index]);
 	}
 
 	hideModal() {
