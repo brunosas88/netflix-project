@@ -234,3 +234,30 @@
     padding-bottom: 0.4vw;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .buttons {
+    height: 5.5vw;
+  }
+
+  #watchBtt {
+    border-radius: 1vw;
+    width: 15.25vw;
+    font-size: 2.2vw;
+  }
+
+  #watchBtt::before {
+    border-width: 0.75vw 0 0.75vw 1.35vw;
+  }
+
+  #moreInfoBtt {
+    width: 26vw;
+    border-radius: 1vw;
+    font-size: 2.2vw;
+  }
+
+  #moreInfoBtt img {
+    width: 2.5vw;
+    padding-bottom: 0.4vw;
+  }
+}
