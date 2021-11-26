@@ -1,5 +1,39 @@
-<div id="series-modal" class="modal-container">
+<button (click)="renderModal(0)">Call modal</button>
+<div
+	id="series-modal"
+	class="modal-container"
+	(click)="hideModal()"
+	[class.show-modal]="showModal"
+	*ngIf="showModal"
+>
 	<div class="modal">
-		<h1>Modal</h1>
+		<button class="modal-close-button" (click)="hideModal()">X</button>
+		<section
+			class="modal-top"
+			[style.background-image]="selectedSeries.backgroundImage"
+		>
+			<img class="modal-top" [src]="selectedSeries.backgroundImage" />
+			<span>dasdsadsadas</span>
+		</section>
+		<section class="modal-bottom">
+			<div class="bottom-left">
+				<div class="left-top">
+					<span class="relevance"
+						>{{ selectedSeries.relevance }}% relevante</span
+					>
+					<span class="text-26">{{ selectedSeries.year }}</span>
+					<span
+						class="rating"
+						[style]="ratingBackgorund(selectedSeries.minAge)"
+						>{{ selectedSeries.minAge }}</span
+					>
+					<span class="text-26">{{ formatTime(selectedSeries.time) }}</span>
+				</div>
+				<div class="left-bottom">
+					{{ selectedSeries.description }}
+				</div>
+			</div>
+			<div class="bottom-right"></div>
+		</section>
 	</div>
 </div>
