@@ -97,10 +97,10 @@
 	bottom: 0;
 	padding: 10px;
 }
-::ng-deep .row__inner:hover {
-	/* 	transform: translate3d(-62.5px, 0, 0);
- */
-}
+/* ::ng-deep .row__inner:hover {
+		transform: translate3d(-62.5px, 0, 0);
+
+} */
 ::ng-deep .row__inner:hover .tile {
 	opacity: 0.3;
 }
