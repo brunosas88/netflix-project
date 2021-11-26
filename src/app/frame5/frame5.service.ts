@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import Series from '../shared/models/series.model';
 import UserSeriesInfo from '../shared/models/user-series-info.model';
