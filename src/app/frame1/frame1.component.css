@@ -1,0 +1,160 @@
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.containerTop {
+    padding: 30px 5.5vw;
+    background-color: var(--black-color);
+    background-image: url("../../assets/netflix_background.png");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 809px;
+    color: var(--very-light-gray-color);
+}
+
+.container img {
+    height: 93px;
+}
+
+.containerTop h1 {
+    max-width: 819px;
+}
+
+.contentTop {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    margin-top: 63px;
+}
+
+.contentTop h1 {
+    font-weight: 800;
+    font-size: 72px;
+    line-height: 90px;
+    text-align: center;
+}
+
+.contentTop h2 {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 58.3px;
+    text-align: center;
+}
+
+.contentTop h3 {
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 90px;
+    text-align: center;
+}
+
+.contentTop button {
+    background-color: var(--dark-red-color);
+    padding: 14px 68px;
+    border-radius: 10px;
+    color: var(--white-color);
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 51px;
+    border: none;
+}
+
+.contentTop button:hover {
+    background-color: var(--red-color);
+    cursor: pointer;
+}
+
+.hr {
+    background-color: var(--very-dark-gray-color);
+    height: 6px;
+    width: 100%;
+}
+
+.btnEntrar {
+    margin-top: 50px;
+}
+
+.content {
+    background-color: var(--black-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media only screen and (max-width: 950px) {
+    .containerTop {
+        height: 709px;
+    }
+
+    .containerTop img {
+        height: 80px;
+    }
+
+    .contentTop h1 {
+        font-size: 50px;
+        line-height: 55px;
+        font-weight: 700;
+    }
+
+    .contentTop h2 {
+        font-size: 26px;
+        line-height: 30px;
+        margin: 16px 0;
+    }
+
+    .contentTop h3 {
+        font-size: 23px;
+        line-height: 26px;
+    } 
+
+    .contentTop button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        width: 81px;
+        font-size: 18px;
+        padding: 0 16px;
+
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    /* main {
+        min-width: 375px;
+    } */
+
+    .containerTop {
+        height: 519px;
+    }
+
+    .containerTop img {
+        height: 60px;
+    }
+
+    .contentTop h1 {
+        font-size: 28px;
+        line-height: 30px;
+        font-weight: 700;
+    }
+
+    .contentTop h2 {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 23px;
+        margin: 16px 0;
+    }
+
+    .contentTop h3 {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 23px;
+    } 
+}
