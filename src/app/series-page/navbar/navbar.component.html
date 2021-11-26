@@ -1,18 +1,22 @@
 <header>
-  <figure>
-    <img src="/assets/netflix-Logo_v2.png" alt="Netflix Logo" />
-  </figure>
-  <nav>
-    <ul>
-      <li
-        class="liHeader firstLi"
-      >
-        Início
-      </li>
-      <li class="liHeader liHeaderSecond">Séries</li>
-      <li class="liHeader liHeaderSecond">Filmes</li>
-      <li class="liHeader liHeaderSecond">Bombando</li>
-      <li class="liHeader liHeaderSecond">Minha Lista</li>
-    </ul>
-  </nav>
+	<figure>
+		<img src="/assets/netflix-Logo_v2.png" alt="Netflix Logo" />
+	</figure>
+	<nav [class.active]="active">
+		<button
+			type="button"
+			id="bttMobile"
+			(mouseenter)="activeOn()"
+			(mouseleave)="activeOff()"
+		>
+			Navegar
+		</button>
+		<ul id="menu" (mouseenter)="activeOn()" (mouseleave)="activeOff()">
+			<li class="liHeader firstLi">Início</li>
+			<li class="liHeader liHeaderSecond">Séries</li>
+			<li class="liHeader liHeaderSecond">Filmes</li>
+			<li class="liHeader liHeaderSecond">Bombando</li>
+			<li class="liHeader liHeaderSecond">Minha Lista</li>
+		</ul>
+	</nav>
 </header>

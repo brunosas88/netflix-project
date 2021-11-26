@@ -1,17 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+	selector: 'app-navbar',
+	templateUrl: './navbar.component.html',
+	styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent implements OnInit {
+	active: boolean = false;
 
-  liBold: boolean = false;
-  
-  constructor() { }
+	constructor() {}
 
-  ngOnInit(): void {
-  }
+	ngOnInit(): void {}
 
+	activeOn() {
+		this.active = true;
+	}
+
+	activeOff() {
+		this.active = false;
+	}
 }

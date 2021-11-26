@@ -1,100 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
 header {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding-top: 50px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding-top: 50px;
+	font-family: 'Martel Sans', sans-serif;
 }
 
 header figure {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
 
-  padding-right: 65px;
-  padding-left: 6vw;
+	padding-right: 65px;
+	padding-left: 6vw;
 }
 
 header img {
-  width: 165px;
+	width: 165px;
 }
 
 header ul {
-  padding: 0;
-  margin: 0;
-  display: flex;
+	padding: 0;
+	margin: 0;
+	display: flex;
 }
 
 .liHeader {
-  list-style: none;
-  margin-right: 35px;
-  font-size: 24px;
-  color: white;
-  font-weight: 300;
-  white-space: nowrap;
+	list-style: none;
+	margin-right: 35px;
+	font-size: 24px;
+	color: white;
+	font-weight: 300;
+	white-space: nowrap;
 }
 .liHeaderSecond:hover {
-  transition: 0.5s;
-  cursor: pointer;
-  color: rgba(255, 255, 255, 0.7);
+	transition: 0.5s;
+	cursor: pointer;
+	color: rgba(255, 255, 255, 0.7);
 }
 
 .firstLi {
-  font-weight: 700;
+	font-weight: 700;
 }
 
 .firstLi:hover {
-  cursor: default;
+	cursor: default;
+}
+
+#bttMobile {
+	display: none;
+	border: none;
+	font-size: 2.3vw;
+	background-color: transparent;
+	font-family: 'Martel Sans', sans-serif;
+	font-weight: 600;
+	color: white;
+}
+
+#bttMobile::after {
+	content: '';
+	display: inline-block;
+	width: 0;
+	height: 0;
+	margin-left: 1.15vw; /*15px*/
+	border-style: solid;
+	border-width: 5px 5px 0px 5px; /*8px 0 8px 15px*/
+	border-color: white transparent transparent transparent;
+}
+
+/* ===================================== RESPONSIVIDADE ===================================================== */
+
+@media screen and (max-width: 885px) {
+	#bttMobile {
+		display: flex;
+		align-items: center;
+	}
+
+	#menu {
+		display: none;
+		/* display: flex; */
+		border-top: #e5e5e5 3px solid;
+		border-radius: 2px;
+		flex-direction: column;
+		justify-content: center;
+		position: absolute;
+		width: 260px;
+		height: 260px;
+		/* margin-top: 30px; */
+		margin-left: -75px;
+		background: rgba(0, 0, 0, 0.9);
+		z-index: 1000;
+	}
+
+	#menu::before {
+		content: '';
+		position: absolute;
+		top: -12px;
+		left: 120px;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 0 10px 10px 10px; /*8px 0 8px 15px*/
+		border-color: transparent transparent #e5e5e5 transparent;
+	}
+
+	.active #menu {
+		display: flex;
+	}
+
+	.liHeader {
+		padding-top: 8px;
+		text-align: center;
+		margin-right: 0;
+		font-size: 18px !important;
+		flex: 1;
+	}
+	.liHeaderSecond {
+		color: rgba(255, 255, 255, 0.7);
+	}
+
+	.liHeader:hover {
+		background-color: rgba(61, 61, 61, 0.5);
+	}
 }
 
 @media screen and (min-width: 1500px) {
-  header figure {
-    padding-left: 90px;
-  }
+	header figure {
+		padding-left: 90px;
+	}
 }
 
 @media screen and (max-width: 1200px) {
-  .liHeader {
-    font-size: 22px; /*it was 24px*/
-  }
+	.liHeader {
+		font-size: 22px; /*it was 24px*/
+	}
 }
 
 @media screen and (max-width: 1150px) {
-  header figure {
-    padding-right: 45px;
-  }
-  .liHeader {
-    font-size: 1.8vw; /*it was 22px*/
-  }
+	header figure {
+		padding-right: 45px;
+	}
+	.liHeader {
+		font-size: 1.8vw; /*it was 22px*/
+	}
 }
 
 @media screen and (max-width: 950px) {
-  header {
-    padding-top: 3vw;
-  }
+	header {
+		padding-top: 3vw;
+	}
 
-  header figure {
-    padding-right: 4.5vw; /*60px*/
-  }
-  header img {
-    width: 12vw;
-  }
+	header figure {
+		padding-right: 4.5vw; /*60px*/
+	}
+	header img {
+		width: 12vw;
+	}
 }
 
 @media screen and (max-width: 840px) and (min-width: 834px) {
-  header img {
-    width: 15vw;
-  }
-  .liHeader {
-    font-size: 2.3vw; /*it was 22px*/
-  }
+	header img {
+		width: 15vw;
+	}
 }
 
 @media screen and (max-width: 480px) {
-  header img {
-    width: 18vw;
-  }
-  .liHeader {
-    font-size: 2.7vw;
-  }
+	header img {
+		width: 18vw;
+	}
+	#bttMobile {
+		font-size: 2.7vw;
+	}
 }
