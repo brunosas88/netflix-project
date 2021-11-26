@@ -39,9 +39,6 @@ export class FormLoginComponent implements OnInit {
 				'',
 				Validators.compose([
 					Validators.required,
-					// Validators.pattern(
-					// 	/^((\d){11}|[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4})$/,
-					// ),
 				]),
 			],
 			passwordUser: [
@@ -78,11 +75,45 @@ export class FormLoginComponent implements OnInit {
 	validateEmailPhone(event: Event) {
 		let emailPhone = (event.target as HTMLInputElement).value
 		const patternEmail = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
-		if (typeof(emailPhone) === typeof(1)) {
-			return true
+		const patternPhone = /^(\d){11}/
+		if (Number(emailPhone)) {
+			if ( patternPhone.test(emailPhone) ) {
+				if ( emailPhone == '00000000000'){
+					this.validatorEmail = true;
+				}
+				else if ( emailPhone == '11111111111') {
+					this.validatorEmail = true;
+				}
+				else if ( emailPhone == '22222222222') {
+					this.validatorEmail = true;
+				}
+				else if ( emailPhone == '33333333333') {
+					this.validatorEmail = true;
+				}
+				else if ( emailPhone == '44444444444') {
+					this.validatorEmail = true;
+				}
+				else if ( emailPhone == '55555555555') {
+					this.validatorEmail = true;
+				}
+				else if ( emailPhone == '66666666666') {
+					this.validatorEmail = true;
+				}
+				else if ( emailPhone == '77777777777') {
+					this.validatorEmail = true;
+				}
+				else if ( emailPhone == '88888888888') {
+					this.validatorEmail = true;
+				}
+				else if ( emailPhone == '99999999999') {
+					this.validatorEmail = true;
+				}
+				else {
+					this.validatorEmail = false;
+				}
+			}
 		} else {
-			console.log( !patternEmail.test(emailPhone))
-			return patternEmail.test(emailPhone);
+			this.validatorEmail = !patternEmail.test(emailPhone);
 		}
 	}
 

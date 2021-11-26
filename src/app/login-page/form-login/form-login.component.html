@@ -1,18 +1,17 @@
 <div class="container-main">
 
 	<form [formGroup]="formContainer">
-
 		<h1>Entrar</h1>
 		<div class="container-input">
 			<input type="text"
 							placeholder="Email ou número de telefone"
 							formControlName="emailPhoneUser"
-							[class.invalidInput] = "formContainer['controls']['emailPhoneUser']['status'] === 'INVALID' &&
-							formContainer['controls']['emailPhoneUser']['touched']"
+							[class.invalidInput] = "
+							formContainer['controls']['emailPhoneUser']['touched']  && validatorEmail "
 							(change)="validateEmailPhone($event)"
 			/>
-			<p class="warning"*ngIf="(formContainer['controls']['emailPhoneUser']['status'] === 'INVALID' &&
-					formContainer['controls']['emailPhoneUser']['touched']) && validatorEmail" >
+			<p class="warning"*ngIf="
+					formContainer['controls']['emailPhoneUser']['touched'] && validatorEmail" >
 				Informe um e-mail ou número de telefone válido
 			</p>
 		</div>
@@ -41,3 +40,4 @@
 	</form>
 </div>
 
+<!-- formContainer['controls']['emailPhoneUser']['status'] === 'INVALID' && -->
