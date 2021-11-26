@@ -65,6 +65,7 @@ button {
 	background-color: var(--dark-red-color);
 	border: 1px solid var(--dark-red-color);
 	color: #ffffff;
+	cursor: pointer;
 }
 
 p {
@@ -102,6 +103,7 @@ span {
 	}
 
 	form {
+		height: 100vh;
 		margin-top: 10px;
 	}
 }
