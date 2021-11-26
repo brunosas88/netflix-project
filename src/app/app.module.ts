@@ -1,16 +1,30 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { FormLoginComponent } from './frame2/form-login/form-login.component';
+import { Frame2Component } from './frame2/frame2.component';
+import { FooterLoginComponent } from './frame2/footer-login/footer-login.component';
+import { ToobarLoginComponent } from './frame2/toobar-login/toobar-login.component';
+
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FormLoginComponent,
+    Frame2Component,
+		FooterLoginComponent,
+  	ToobarLoginComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+		ReactiveFormsModule,
+		HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
