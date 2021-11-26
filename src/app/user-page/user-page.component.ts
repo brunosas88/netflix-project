@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { LoginData } from '../core/models/login-data.model';
 
 @Component({
@@ -14,7 +15,7 @@ export class UserPageComponent implements OnInit {
 
 	selectedUser: string = '';
 
-	constructor() {}
+	constructor(private router: Router) {}
 
 	ngOnInit() {
 		this.dataUser = JSON.parse(localStorage.getItem('data') || '{}');
@@ -22,6 +23,8 @@ export class UserPageComponent implements OnInit {
 
 	getUserId(n: number) {
 		this.selectedUser = JSON.stringify(this.dataUser.users[n - 1]);
-		return localStorage.setItem('selectedUser', this.selectedUser);
+		localStorage.setItem('selectedUser', this.selectedUser);
+		this.router.navigate(['/frame5']);
+		// return localStorage.setItem('selectedUser', this.selectedUser);
 	}
 }

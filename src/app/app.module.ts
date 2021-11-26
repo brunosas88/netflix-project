@@ -17,6 +17,7 @@ import { FormLoginComponent } from './login-page/form-login/form-login.component
 import { LoginPageComponent } from './login-page/login-page.component';
 import { FooterLoginComponent } from './login-page/footer-login/footer-login.component';
 import { ToolbarComponent } from './shared/toolbar/toolbar.component';
+import { Frame5Component } from './frame5/frame5.component';
 
 @NgModule({
 	declarations: [
@@ -32,6 +33,7 @@ import { ToolbarComponent } from './shared/toolbar/toolbar.component';
 		PromoListTextLeftComponent,
 		PromoListTextRightComponent,
 		FooterStartComponent,
+		Frame5Component
 	],
 	imports: [
 		BrowserModule,
@@ -45,4 +47,5 @@ import { ToolbarComponent } from './shared/toolbar/toolbar.component';
 	providers: [],
 	bootstrap: [AppComponent],
 })
+
 export class AppModule {}

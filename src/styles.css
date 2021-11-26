@@ -1,6 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
-
 	--dark-red-color: #e50914;
 	--red-color: #fd000d;
 	--white-color: #fff;
@@ -21,6 +20,7 @@
 body {
 	margin: 0;
 	width: 100vw;
+	background-color: black;
 }
 
 * {
@@ -28,3 +28,4 @@ body {
 	padding: 0;
 	font-family: 'Martel Sans', sans-serif;
 }
+
