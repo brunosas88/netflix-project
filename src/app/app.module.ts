@@ -15,6 +15,10 @@ import { FormLoginComponent } from './login-page/form-login/form-login.component
 import { LoginPageComponent } from './login-page/login-page.component';
 import { FooterLoginComponent } from './login-page/footer-login/footer-login.component';
 import { ToobarLoginComponent } from './login-page/toobar-login/toobar-login.component';
+import { SeriesPageComponent } from './series-page/series-page.component';
+import { CardComponentComponent } from './card-component/card-component.component';
+import { CarouselComponent } from './carousel/carousel.component';
+import { NavbarComponent } from './series-page/navbar/navbar.component';
 
 @NgModule({
 	declarations: [
@@ -28,12 +32,19 @@ import { ToobarLoginComponent } from './login-page/toobar-login/toobar-login.com
 		PromoListTextLeftComponent,
 		PromoListTextRightComponent,
 		FooterStartComponent,
+		SeriesPageComponent,
+		CardComponentComponent,
+		CarouselComponent,
+		AppComponent,
+		NavbarComponent,
 	],
 	imports: [
 		BrowserModule,
 		AppRoutingModule,
 		ReactiveFormsModule,
 		HttpClientModule,
+		BrowserModule,
+		AppRoutingModule,
 	],
 	providers: [],
 	bootstrap: [AppComponent],

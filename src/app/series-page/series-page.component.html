@@ -1,0 +1,56 @@
+<div class="frame5">
+	<div class="backgroundImage">
+		<img src="/assets/frame_5_background.png" alt="" />
+	</div>
+	<div class="backgroundFrame5"></div>
+	<app-navbar></app-navbar>
+	<div class="container">
+		<div class="contentFrame5">
+			<div class="movieTitle">
+				<img src="/assets/movie_title.png" alt="" />
+			</div>
+			<div class="topToday">
+				<h5>TOP 10</h5>
+				<h2>Brasil: top 2 de hoje</h2>
+			</div>
+			<div class="synopsis">
+				<p>
+					Um agente do FBI persegue o ladrão de arte mais procurado do mundo.
+					Ele só não esperava ter seu alvo como parceiro para prender uma
+					bandida muito esperta.
+				</p>
+			</div>
+			<div class="buttons">
+				<button type="button" id="watchBtt">Assistir</button>
+				<button type="button" id="moreInfoBtt">
+					<img src="/assets/info_icon.png" /> Mais informações
+				</button>
+			</div>
+		</div>
+		<div class="contain"></div>
+		<div class="userPreferences">
+			<div
+				style="display: flex; flex-direction: column"
+				*ngIf="userSeriesInfo.popular"
+			>
+				<h2>Populares na Netflix</h2>
+
+				<div class="contain">
+					<app-carousel [seriesIds]="userSeriesInfo.popular"></app-carousel>
+				</div>
+			</div>
+			<div
+				style="display: flex; flex-direction: column"
+				*ngIf="userSeriesInfo.popular"
+			>
+				<h2>Continuar assistindo como {{ selectedUser.name }}</h2>
+
+				<div class="contain">
+					<app-carousel
+						[seriesIds]="userSeriesInfo.keepWatching"
+					></app-carousel>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
