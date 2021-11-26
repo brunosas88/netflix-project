@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { SelectControlValueAccessor } from '@angular/forms';
 import UserSeriesInfo from '../shared/models/user-series-info.model';
 import { SeriesPageServices } from './series-page.service';
 
