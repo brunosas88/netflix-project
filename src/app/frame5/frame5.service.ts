@@ -6,7 +6,7 @@ import UserSeriesInfo from '../shared/models/user-series-info.model';
 @Injectable({
 	providedIn: 'root',
 })
-export class CarouselServices {
+export class SeriesPageServices {
 	urlGetUserSeriesInfo: string =
 		'http://private-3923c4-santandercoders809.apiary-mock.com/users/1';
 

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { forkJoin, Observable } from 'rxjs';
+import { forkJoin } from 'rxjs';
 import Series from '../shared/models/series.model';
 import UserSeriesInfo from '../shared/models/user-series-info.model';
-import { CarouselServices } from './frame5.service';
+import { SeriesPageServices } from './frame5.service';
 
 @Component({
 	selector: 'app-frame5',
@@ -10,26 +10,14 @@ import { CarouselServices } from './frame5.service';
 	styleUrls: ['./frame5.component.css'],
 })
 export class Frame5Component implements OnInit {
-	constructor(private service: CarouselServices) {}
+	constructor(private service: SeriesPageServices) {}
 
 	userSeriesInfo: UserSeriesInfo = {} as UserSeriesInfo;
-	keepWatchingSeriesArray: Array<Series> = [];
-	popularSeriesArray: Array<Series> = [];
 
 	ngOnInit(): void {
 		this.service.getUserSeriesInfo().subscribe({
 			next: (data) => {
-				forkJoin(
-					data.keepWatching.map((serieId) => {
-						return this.service.getSerieById(serieId);
-					}),
-				).subscribe((result) => (this.keepWatchingSeriesArray = result));
-
-				forkJoin(
-					data.popular.map((serieId) => {
-						return this.service.getSerieById(serieId);
-					}),
-				).subscribe((result) => (this.popularSeriesArray = result));
+				this.userSeriesInfo = data;
 			},
 			error: (erro) => {
 				console.log(erro.error.text);

@@ -1,8 +1,11 @@
 <body>
 	<div class="contain">
-		<div style="display: flex; flex-direction: column">
-			<app-carousel [seriesArray]="popularSeriesArray"></app-carousel>
-			<app-carousel [seriesArray]="keepWatchingSeriesArray"></app-carousel>
+		<div
+			style="display: flex; flex-direction: column"
+			*ngIf="userSeriesInfo.popular"
+		>
+			<app-carousel [seriesIds]="userSeriesInfo.popular"></app-carousel>
+			<app-carousel [seriesIds]="userSeriesInfo.keepWatching"></app-carousel>
 		</div>
 	</div>
 </body>
