@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ModalServerComponent } from './modal-server.component';
+import { SeriesModalComponent } from './series-modal.component';
 
-describe('ModalServerComponent', () => {
-  let component: ModalServerComponent;
-  let fixture: ComponentFixture<ModalServerComponent>;
+describe('SeriesModalComponent', () => {
+  let component: SeriesModalComponent;
+  let fixture: ComponentFixture<SeriesModalComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ModalServerComponent ]
+      declarations: [ SeriesModalComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ModalServerComponent);
+    fixture = TestBed.createComponent(SeriesModalComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
