@@ -16,7 +16,6 @@ import { FormLoginService } from './form-login.service';
 	styleUrls: ['./form-login.component.css'],
 })
 export class FormLoginComponent implements OnInit {
-
 	formContainer = new FormGroup({
 		emailPhone: new FormControl(''),
 		passwordUser: new FormControl(''),
@@ -35,12 +34,7 @@ export class FormLoginComponent implements OnInit {
 
 	ngOnInit(): void {
 		this.formContainer = this.fb.group({
-			emailPhoneUser: [
-				'',
-				Validators.compose([
-					Validators.required,
-				]),
-			],
+			emailPhoneUser: ['', Validators.compose([Validators.required])],
 			passwordUser: [
 				'',
 				Validators.compose([
@@ -72,43 +66,19 @@ export class FormLoginComponent implements OnInit {
 			});
 	}
 
+	allEqual(arr: Array<number | string>) {
+		return arr.every((v) => v === arr[0]);
+	}
+
 	validateEmailPhone(event: Event) {
-		let emailPhone = (event.target as HTMLInputElement).value
+		let emailPhone = (event.target as HTMLInputElement).value;
 		const patternEmail = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
-		const patternPhone = /^(\d){11}/
+		const patternPhone = /^(\d){11}/;
 		if (Number(emailPhone)) {
-			if ( patternPhone.test(emailPhone) ) {
-				if ( emailPhone == '00000000000'){
+			if (patternPhone.test(emailPhone)) {
+				if (this.allEqual(emailPhone.split(''))) {
 					this.validatorEmail = true;
-				}
-				else if ( emailPhone == '11111111111') {
-					this.validatorEmail = true;
-				}
-				else if ( emailPhone == '22222222222') {
-					this.validatorEmail = true;
-				}
-				else if ( emailPhone == '33333333333') {
-					this.validatorEmail = true;
-				}
-				else if ( emailPhone == '44444444444') {
-					this.validatorEmail = true;
-				}
-				else if ( emailPhone == '55555555555') {
-					this.validatorEmail = true;
-				}
-				else if ( emailPhone == '66666666666') {
-					this.validatorEmail = true;
-				}
-				else if ( emailPhone == '77777777777') {
-					this.validatorEmail = true;
-				}
-				else if ( emailPhone == '88888888888') {
-					this.validatorEmail = true;
-				}
-				else if ( emailPhone == '99999999999') {
-					this.validatorEmail = true;
-				}
-				else {
+				} else {
 					this.validatorEmail = false;
 				}
 			}
@@ -116,5 +86,4 @@ export class FormLoginComponent implements OnInit {
 			this.validatorEmail = !patternEmail.test(emailPhone);
 		}
 	}
-
 }
