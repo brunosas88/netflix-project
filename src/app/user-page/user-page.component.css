@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@400;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+.containerFrame4 {
+	background-color: #141414;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-family: 'Martel Sans', sans-serif;
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+}
+
+header {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+header figure {
+	margin-left: 5.9vw;
+	margin-top: 53px;
+}
+
+header img {
+	width: 165px; /* 165px*/
+}
+
+p {
+	font-size: 3.5vw;
+	font-family: 'Martel Sans', sans-serif;
+	text-align: center;
+	margin: 2vw;
+	line-height: 1.2;
+	margin-bottom: 2.5vw;
+	word-break: break-word;
+}
+
+p:hover {
+	cursor: default;
+}
+
+.viewFrame4 {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	/* margin-top: 18.5vw; */
+	margin-top: 270px;
+	width: 90%;
+}
+
+.userFrame4 {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+	max-width: 80%;
+	/* padding-top: 3.5vw; */
+	padding-top: 50px;
+}
+
+.userFrame4 figure {
+	padding: 0 2.5vw;
+}
+
+.userFrame4 img {
+	width: 10.725vw; /* 145px*/
+	height: 10.725vw;
+	border-radius: 8px;
+	border: 3px black solid;
+}
+
+.userFrame4 img:hover {
+	border: 3px white solid;
+	cursor: pointer;
+}
+
+.userFrame4 img:hover + figcaption {
+	opacity: 100%;
+}
+
+.userFrame4 figcaption {
+	text-align: center;
+	opacity: 50%;
+	font-size: larger;
+}
+
+.userFrame4 figcaption:hover {
+	cursor: pointer;
+}
+
+@media screen and (max-width: 950px) {
+	header img {
+		width: 17.5vw; /*12.1vw for default*/
+	}
+}
+
+@media screen and (min-width: 1920px) {
+	.userFrame4 img {
+		width: 205.875px;
+		height: 205.875px;
+	}
+}
+
+@media screen and (min-width: 1465px) {
+	header figure {
+		margin-left: 86.376px;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	p {
+		font-size: 28px;
+	}
+
+	.userFrame4 img {
+		width: 85.792px; /* 145px*/
+		height: 85.792px;
+	}
+}
+
+@media screen and (min-width: 1465px) {
+	header figure {
+		margin-left: 86.376px;
+	}
+}

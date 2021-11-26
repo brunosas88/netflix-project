@@ -1,0 +1,20 @@
+<div class="containerFrame4">
+	<header>
+		<figure>
+			<img src="/assets/netflix-Logo_v2.png" alt="" />
+		</figure>
+	</header>
+	<div class="viewFrame4">
+		<p>Quem está assistindo?</p>
+		<div class="userFrame4">
+			<figure *ngFor="let item of dataUser.users">
+				<img
+					src="{{ item.avatarUrl }}"
+					alt=" Avatar de {{ item.name }} "
+					(click)="getUserId(item.id)"
+				/>
+				<figcaption>{{ item.name }}</figcaption>
+			</figure>
+		</div>
+	</div>
+</div>

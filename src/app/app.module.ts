@@ -5,6 +5,8 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { UserPageComponent } from './user-page/user-page.component';
+
 import { HomePageComponent } from './home-page/home-page.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PromoListTextLeftComponent } from './components/promo-list-text-left/promo-list-text-left.component';
@@ -23,6 +25,8 @@ import { NavbarComponent } from './series-page/navbar/navbar.component';
 @NgModule({
 	declarations: [
 		AppComponent,
+		UserPageComponent,
+		AppComponent,
 		FormLoginComponent,
 		LoginPageComponent,
 		FooterLoginComponent,
@@ -39,6 +43,9 @@ import { NavbarComponent } from './series-page/navbar/navbar.component';
 		NavbarComponent,
 	],
 	imports: [
+		BrowserModule,
+		AppRoutingModule,
+		HttpClientModule,
 		BrowserModule,
 		AppRoutingModule,
 		ReactiveFormsModule,
