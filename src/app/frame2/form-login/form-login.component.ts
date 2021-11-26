@@ -33,7 +33,7 @@ export class FormLoginComponent implements OnInit {
 				Validators.compose([
 					Validators.required,
 					Validators.pattern(
-						/^([\d]{11}|\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3}))$/,
+						/^(0[1-59](?!(\d)\1{7}$)\d{8}|\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3}))$/,
 					),
 				]),
 			],
