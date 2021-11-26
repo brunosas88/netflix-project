@@ -16,11 +16,11 @@ import { FooterStartComponent } from './components/footer-start/footer-start.com
 import { FormLoginComponent } from './login-page/form-login/form-login.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { FooterLoginComponent } from './login-page/footer-login/footer-login.component';
-import { ToobarLoginComponent } from './login-page/toobar-login/toobar-login.component';
 import { SeriesPageComponent } from './series-page/series-page.component';
 import { CardComponentComponent } from './card-component/card-component.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { NavbarComponent } from './series-page/navbar/navbar.component';
+import { ToolbarComponent } from './shared/toolbar/toolbar.component';
 
 @NgModule({
 	declarations: [
@@ -30,7 +30,7 @@ import { NavbarComponent } from './series-page/navbar/navbar.component';
 		FormLoginComponent,
 		LoginPageComponent,
 		FooterLoginComponent,
-		ToobarLoginComponent,
+		ToolbarComponent,
 		HomePageComponent,
 		FooterComponent,
 		PromoListTextLeftComponent,
