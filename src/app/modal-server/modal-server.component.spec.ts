@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Frame6Component } from './frame6.component';
+import { ModalServerComponent } from './modal-server.component';
 
-describe('Frame6Component', () => {
-  let component: Frame6Component;
-  let fixture: ComponentFixture<Frame6Component>;
+describe('ModalServerComponent', () => {
+  let component: ModalServerComponent;
+  let fixture: ComponentFixture<ModalServerComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ Frame6Component ]
+      declarations: [ ModalServerComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(Frame6Component);
+    fixture = TestBed.createComponent(ModalServerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
