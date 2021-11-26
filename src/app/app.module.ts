@@ -5,7 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { Frame4Component } from './frame4/frame4.component';
+import { UserPageComponent } from './user-page/user-page.component';
 
 import { HomePageComponent } from './home-page/home-page.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -21,7 +21,7 @@ import { ToobarLoginComponent } from './login-page/toobar-login/toobar-login.com
 @NgModule({
 	declarations: [
 		AppComponent,
-		Frame4Component,
+		UserPageComponent,
 		AppComponent,
 		FormLoginComponent,
 		LoginPageComponent,

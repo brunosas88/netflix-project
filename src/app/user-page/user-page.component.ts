@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { LoginData } from '../core/models/login-data.model';
 
 @Component({
-	selector: 'app-frame4',
-	templateUrl: './frame4.component.html',
-	styleUrls: ['./frame4.component.css'],
+	selector: 'user-page',
+	templateUrl: './user-page.component.html',
+	styleUrls: ['./user-page.component.css'],
 })
-export class Frame4Component implements OnInit {
+export class UserPageComponent implements OnInit {
 	dataUser: LoginData = {
 		token: '',
 		users: [],
