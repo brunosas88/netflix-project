@@ -25,6 +25,7 @@ export class FormLoginComponent implements OnInit {
 	textShow: boolean = true;
 	user: string = '';
 	password: string = '';
+	validatorEmail: boolean = true;
 	constructor(
 		private fb: FormBuilder,
 		private formLoginService: FormLoginService,
@@ -38,9 +39,9 @@ export class FormLoginComponent implements OnInit {
 				'',
 				Validators.compose([
 					Validators.required,
-					Validators.pattern(
-						/^([\d]{11}|\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3}))$/,
-					),
+					// Validators.pattern(
+					// 	/^((\d){11}|[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4})$/,
+					// ),
 				]),
 			],
 			passwordUser: [
@@ -55,7 +56,7 @@ export class FormLoginComponent implements OnInit {
 	}
 
 	showMessage() {
-		this.textShow = false;
+		this.textShow = true;
 	}
 
 	goToNextPage() {
@@ -74,8 +75,15 @@ export class FormLoginComponent implements OnInit {
 			});
 	}
 
-	validateEmailPhone() {
-
+	validateEmailPhone(event: Event) {
+		let emailPhone = (event.target as HTMLInputElement).value
+		const patternEmail = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
+		if (typeof(emailPhone) === typeof(1)) {
+			return true
+		} else {
+			console.log( !patternEmail.test(emailPhone))
+			return patternEmail.test(emailPhone);
+		}
 	}
 
 }

@@ -9,9 +9,10 @@
 							formControlName="emailPhoneUser"
 							[class.invalidInput] = "formContainer['controls']['emailPhoneUser']['status'] === 'INVALID' &&
 							formContainer['controls']['emailPhoneUser']['touched']"
+							(change)="validateEmailPhone($event)"
 			/>
-			<p class="warning"*ngIf="formContainer['controls']['emailPhoneUser']['status'] === 'INVALID' &&
-					formContainer['controls']['emailPhoneUser']['touched']" >
+			<p class="warning"*ngIf="(formContainer['controls']['emailPhoneUser']['status'] === 'INVALID' &&
+					formContainer['controls']['emailPhoneUser']['touched']) && validatorEmail" >
 				Informe um e-mail ou número de telefone válido
 			</p>
 		</div>
