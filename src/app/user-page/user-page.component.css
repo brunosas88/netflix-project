@@ -34,7 +34,7 @@ p {
 	font-family: 'Martel Sans', sans-serif;
 	text-align: center;
 	margin: 2vw;
-	line-height: 0;
+	line-height: 1.2;
 	margin-bottom: 2.5vw;
 	word-break: break-word;
 }
@@ -63,6 +63,10 @@ p:hover {
 	padding-top: 50px;
 }
 
+.userFrame4 figure {
+	padding: 0 2.5vw;
+}
+
 .userFrame4 img {
 	width: 10.725vw; /* 145px*/
 	height: 10.725vw;
@@ -83,6 +87,10 @@ p:hover {
 	text-align: center;
 	opacity: 50%;
 	font-size: larger;
+}
+
+.userFrame4 figcaption:hover {
+	cursor: pointer;
 }
 
 @media screen and (max-width: 950px) {
