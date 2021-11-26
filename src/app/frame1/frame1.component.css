@@ -118,21 +118,24 @@ main {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 40px;
-        width: 81px;
-        font-size: 18px;
+        height: 60px;
+        width: 120px;
+        font-size: 23px;
         padding: 0 16px;
-
     }
 }
 
 @media only screen and (max-width: 550px) {
-    /* main {
-        min-width: 375px;
-    } */
 
     .containerTop {
         height: 519px;
+    }
+
+    .contentTop button {
+        height: 40px;
+        width: 81px;
+        font-size: 18px;
+        padding: 0 32px;
     }
 
     .containerTop img {
