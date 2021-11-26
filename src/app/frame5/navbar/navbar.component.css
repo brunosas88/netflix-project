@@ -1,12 +1,16 @@
 header {
   display: flex;
   justify-content: flex-start;
-  align-items: flex-end;
+  align-items: center;
+  padding-top: 50px;
 }
 
 header figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0;
-  padding-top: 50px;
+
   padding-right: 65px;
   padding-left: 6vw;
 }
@@ -17,6 +21,7 @@ header img {
 
 header ul {
   padding: 0;
+  margin: 0;
   display: flex;
 }
 
@@ -45,6 +50,36 @@ header ul {
 @media screen and (min-width: 1500px) {
   header figure {
     padding-left: 90px;
-    /* margin: 10vw; */
   }
+}
+
+@media screen and (max-width: 1200px) {
+  .liHeader {
+    font-size: 22px; /*it was 24px*/
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  header figure {
+    padding-right: 45px;
+  }
+  .liHeader {
+    font-size: 1.8vw; /*it was 22px*/
+  }
+}
+
+@media screen and (max-width: 950px) {
+  header {
+    padding-top: 3vw;
+  }
+
+  header figure {
+    padding-right: 4.5vw; /*60px*/
+  }
+  header img {
+    width: 12vw;
+  }
+}
+
+@media screen and (width: 840px) {
 }
