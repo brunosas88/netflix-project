@@ -140,7 +140,6 @@
   justify-content: center;
   align-items: center;
   white-space: nowrap;
-
 }
 
 #moreInfoBtt img {
@@ -155,14 +154,13 @@
 }
 
 .userPreferences {
-  color: #E5E5E5;
+  color: #e5e5e5;
   width: 94vw;
   margin-bottom: 5vw;
 }
 
 .userPreferences h2 {
   font-size: 1.9vw; /*26px*/
-
 }
 
 .userPreferences div {
@@ -180,5 +178,59 @@
 @media screen and (min-width: 1500px) {
   .container {
     padding-left: 90px;
+  }
+}
+
+@media screen and (max-width: 840px) and (min-width: 834px) {
+  .buttons {
+    height: 6.5vw;
+  }
+
+  #watchBtt {
+    border-radius: 1vw;
+    width: 17.25vw;
+    font-size: 2.5vw;
+  }
+
+  #watchBtt::before {
+    border-width: 1vw 0 1vw 1.55vw;
+  }
+
+  #moreInfoBtt {
+    width: 29vw;
+    border-radius: 1vw;
+    font-size: 2.5vw;
+  }
+
+  #moreInfoBtt img {
+    width: 3vw;
+    padding-bottom: 0.5vw;
+  }
+}
+
+@media screen and (max-width: 834px) {
+  .buttons {
+    height: 5.5vw;
+  }
+
+  #watchBtt {
+    border-radius: 1vw;
+    width: 15.25vw;
+    font-size: 2.2vw;
+  }
+
+  #watchBtt::before {
+    border-width: 0.75vw 0 0.75vw 1.35vw;
+  }
+
+  #moreInfoBtt {
+    width: 26vw;
+    border-radius: 1vw;
+    font-size: 2.2vw;
+  }
+
+  #moreInfoBtt img {
+    width: 2.5vw;
+    padding-bottom: 0.4vw;
   }
 }
