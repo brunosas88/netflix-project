@@ -1,0 +1,15 @@
+.series-info-wrapper {
+	font-family: 'Martel Sans', sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+	margin-bottom: 25px;
+}
+
+.title {
+	color: #6e6e6e;
+	text-transform: capitalize;
+}
+
+.info {
+	color: var(--white-color);
+}

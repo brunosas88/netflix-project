@@ -21,6 +21,8 @@ import { CardComponentComponent } from './card-component/card-component.componen
 import { CarouselComponent } from './carousel/carousel.component';
 import { NavbarComponent } from './series-page/navbar/navbar.component';
 import { ToolbarComponent } from './shared/toolbar/toolbar.component';
+import { SeriesModalComponent } from './series-modal/series-modal.component';
+import { SeriesInfoComponent } from './series-info/series-info.component';
 
 @NgModule({
 	declarations: [
@@ -41,6 +43,8 @@ import { ToolbarComponent } from './shared/toolbar/toolbar.component';
 		CarouselComponent,
 		AppComponent,
 		NavbarComponent,
+		SeriesModalComponent,
+		SeriesInfoComponent,
 	],
 	imports: [
 		BrowserModule,

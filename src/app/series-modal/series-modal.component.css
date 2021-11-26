@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@400;600;700&display=swap');
+
+body {
+	background-color: blue;
+}
+
+.modal-container {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 2000;
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+
+.modal-container.show-modal {
+	display: flex;
+}
+
+.modal {
+	background-color: #141414;
+	width: 76%;
+	height: 80vh;
+	position: relative;
+	font-family: 'Martel Sans', sans-serif;
+}
+
+@keyframes modal {
+	from {
+		opacity: 0;
+		transform: translate3d(0, -60px, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0px, 0);
+	}
+}
+
+.show-modal .modal {
+	animation: modal 0.3s;
+}
+
+.modal-close-button {
+	position: absolute;
+	font-size: 25px;
+	font-weight: 100;
+	top: 20px;
+	right: 22px;
+	width: 40px;
+	height: 40px;
+	border-radius: 100%;
+	background-color: #141414;
+	color: #fff;
+	cursor: pointer;
+}
+
+.modal-top {
+	width: 100%;
+}
+
+.modal-bottom {
+	padding: 20px 62px 72px 60px;
+	display: flex;
+	flex-direction: row;
+}
+
+.bottom-left {
+	display: flex;
+	flex-direction: column;
+	margin-right: 50px;
+}
+
+.left-top {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.relevance {
+	color: var(--green-color);
+	line-height: 20px;
+	font-size: 24px;
+	font-weight: bold;
+}
+.rating {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	border-radius: 5px;
+	font-size: 24px;
+	line-height: 20px;
+}
+
+.text-26 {
+	font-size: 26px;
+	margin: 0 22px;
+	color: var(--white-color);
+}
+
+.left-bottom {
+	font-size: 26px;
+	color: var(--white-color);
+	margin-top: 47px;
+}
+
+.bottom-right {
+	display: flex;
+	flex-direction: column;
+}

@@ -5,9 +5,9 @@ export default interface Series {
 	relevance: number;
 	year: number;
 	minAge: number;
-	time: number;
-	season?: number;
-	descpription: string;
+	time: number | null;
+	season?: number | null;
+	description: string;
 	cast: Array<string>;
 	genre: Array<string>;
 	scenes: Array<string>;

@@ -1,0 +1,50 @@
+<div
+	id="series-modal"
+	class="modal-container"
+	(click)="hideModal()"
+	[class.show-modal]="showModal"
+	*ngIf="showModal"
+>
+	<div class="modal">
+		<button class="modal-close-button" (click)="hideModal()">X</button>
+		<section
+			class="modal-top"
+			[style.background-image]="selectedSeries.backgroundImage"
+		>
+			<img class="modal-top" [src]="selectedSeries.backgroundImage" />
+		</section>
+		<section class="modal-bottom">
+			<div class="bottom-left">
+				<div class="left-top">
+					<span class="relevance"
+						>{{ selectedSeries.relevance }}% relevante</span
+					>
+					<span class="text-26">{{ selectedSeries.year }}</span>
+					<span
+						class="rating"
+						[style]="ratingBackgorund(selectedSeries.minAge)"
+						>{{ selectedSeries.minAge }}</span
+					>
+					<span class="text-26">{{ formatTime(selectedSeries.time) }}</span>
+				</div>
+				<div class="left-bottom">
+					{{ selectedSeries.description }}
+				</div>
+			</div>
+			<div class="bottom-right">
+				<app-series-info
+					title="Elenco: "
+					[info]="selectedSeries.cast"
+				></app-series-info>
+				<app-series-info
+					title="Gêneros: "
+					[info]="selectedSeries.genre"
+				></app-series-info>
+				<app-series-info
+					title="cenas e momentos: "
+					[info]="selectedSeries.scenes"
+				></app-series-info>
+			</div>
+		</section>
+	</div>
+</div>

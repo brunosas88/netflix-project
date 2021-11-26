@@ -14,6 +14,10 @@ export class CarouselComponent implements OnInit {
 
 	constructor(private service: CarouselServices) {}
 
+	listenChild(index: number) {
+		console.log(index);
+	}
+
 	ngOnInit(): void {
 		forkJoin(
 			this.seriesIds.map((serieId) => {
