@@ -47,7 +47,7 @@ export class FormLoginComponent implements OnInit {
 	}
 
 	showMessage() {
-		this.textShow = true;
+		this.textShow = false;
 	}
 
 	goToNextPage() {
