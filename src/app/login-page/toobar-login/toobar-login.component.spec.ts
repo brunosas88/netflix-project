@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Frame4Component } from './frame4.component';
+import { ToobarLoginComponent } from './toobar-login.component';
 
-describe('Frame4Component', () => {
-  let component: Frame4Component;
-  let fixture: ComponentFixture<Frame4Component>;
+describe('ToobarLoginComponent', () => {
+  let component: ToobarLoginComponent;
+  let fixture: ComponentFixture<ToobarLoginComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ Frame4Component ]
+      declarations: [ ToobarLoginComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(Frame4Component);
+    fixture = TestBed.createComponent(ToobarLoginComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
