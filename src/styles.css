@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
+
 	--dark-red-color: #e50914;
 	--red-color: #fd000d;
 	--white-color: #fff;
@@ -12,6 +13,9 @@
 	--orange-color: #f28300;
 	--green-color: #46d369;
 	--yellow-color: #ebc500;
+	--background-color: rgba(0, 0, 0, 0.75);
+		--medium-gray-color: #8c8c8c;
+		--blue-color: #0080ff;
 }
 
 body {
