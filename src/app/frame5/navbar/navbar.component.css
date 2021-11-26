@@ -88,6 +88,13 @@ header ul {
   .liHeader {
     font-size: 2.3vw; /*it was 22px*/
   }
+}
 
-
+@media screen and (max-width: 480px) {
+  header img {
+    width: 18vw;
+  }
+  .liHeader {
+    font-size: 2.7vw;
+  }
 }

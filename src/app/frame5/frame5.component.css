@@ -170,7 +170,7 @@
 }
 
 .dummy {
-  height: 121px;
+  height: 9vw; /*121px*/
   width: 100%;
   background-color: tomato;
 }
@@ -237,27 +237,27 @@
 
 @media screen and (max-width: 480px) {
   .buttons {
-    height: 5.5vw;
+    height: 8.5vw;
   }
 
   #watchBtt {
     border-radius: 1vw;
-    width: 15.25vw;
-    font-size: 2.2vw;
+    width: 17.25vw;
+    font-size: 2.5vw;
   }
 
   #watchBtt::before {
-    border-width: 0.75vw 0 0.75vw 1.35vw;
+    border-width: 1vw 0 1vw 1.55vw;
   }
 
   #moreInfoBtt {
-    width: 26vw;
+    width: 30vw;
     border-radius: 1vw;
-    font-size: 2.2vw;
+    font-size: 2.5vw;
   }
 
   #moreInfoBtt img {
-    width: 2.5vw;
-    padding-bottom: 0.4vw;
+    width: 3vw;
+    padding-bottom: 0.5vw;
   }
 }
