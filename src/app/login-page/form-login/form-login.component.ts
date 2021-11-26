@@ -39,7 +39,11 @@ export class FormLoginComponent implements OnInit {
 			],
 			passwordUser: [
 				'',
-				Validators.compose([Validators.required, Validators.minLength(4), Validators.maxLength(60)]),
+				Validators.compose([
+					Validators.required,
+					Validators.minLength(4),
+					Validators.maxLength(60),
+				]),
 			],
 		});
 	}
@@ -51,14 +55,15 @@ export class FormLoginComponent implements OnInit {
 	getInfo() {
 		this.user = this.formContainer['controls']['emailPhoneUser']['value'];
 		this.password = this.formContainer['controls']['passwordUser']['value'];
-		this.formLoginService.login({user: this.user, password:this.password}).subscribe({
-			next: (data) => {
-				console.log(JSON.parse(data));
-				localStorage.setItem('data', data);
-			},
-			error: (erro) => {
-				console.log(erro.error.text);
-			},
-		});
+		this.formLoginService
+			.login({ user: this.user, password: this.password })
+			.subscribe({
+				next: (data) => {
+					localStorage.setItem('data', data);
+				},
+				error: (erro) => {
+					console.log(erro.error.text);
+				},
+			});
 	}
 }

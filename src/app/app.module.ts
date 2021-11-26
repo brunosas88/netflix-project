@@ -11,16 +11,16 @@ import { PromoListTextLeftComponent } from './components/promo-list-text-left/pr
 import { PromoListTextRightComponent } from './components/promo-list-text-right/promo-list-text-right.component';
 import { FooterStartComponent } from './components/footer-start/footer-start.component';
 
-import { FormLoginComponent } from './frame2/form-login/form-login.component';
-import { Frame2Component } from './frame2/frame2.component';
-import { FooterLoginComponent } from './frame2/footer-login/footer-login.component';
-import { ToobarLoginComponent } from './frame2/toobar-login/toobar-login.component';
+import { FormLoginComponent } from './login-page/form-login/form-login.component';
+import { LoginPageComponent } from './login-page/login-page.component';
+import { FooterLoginComponent } from './login-page/footer-login/footer-login.component';
+import { ToobarLoginComponent } from './login-page/toobar-login/toobar-login.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
 		FormLoginComponent,
-		Frame2Component,
+		LoginPageComponent,
 		FooterLoginComponent,
 		ToobarLoginComponent,
 		HomePageComponent,
