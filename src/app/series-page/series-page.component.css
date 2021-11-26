@@ -37,10 +37,6 @@ a:visited {
 	display: flex;
 	flex-direction: column;
 	font-family: 'Martel Sans', sans-serif;
-	/* background-image: url(/assets/frame_5_background.png) ;
-	background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; */
 	width: 100vw;
 	position: relative;
 	color: white;
@@ -63,14 +59,6 @@ a:visited {
 	width: 56vw; /*650px 47.75vw*/
 	padding-left: 6vw; /* 80px*/
 }
-
-/* .backgroundFrame5 {
-  background-color: #141414;
-  position: absolute;
-  width: 1440px;
-  height: 100vw;
-  z-index: -2;
-} */
 
 .contentFrame5 {
 	display: flex;
@@ -197,14 +185,7 @@ a:visited {
 }
 
 .userPreferences div {
-	/*margin-top: 1.6vw; /*20px*/
-	/*margin-bottom: 4vw; /*40px*/
 	white-space: nowrap;
-}
-
-.series {
-	/*height: 5vw; /*121px*/
-	/* width: 100%; */
 }
 
 @media screen and (min-width: 1500px) {

@@ -34,10 +34,9 @@
 				*ngIf="userSeriesInfo.popular"
 			>
 				<h2>Populares na Netflix</h2>
-				<div class="series">
-					<div class="contain">
-						<app-carousel [seriesIds]="userSeriesInfo.popular"></app-carousel>
-					</div>
+
+				<div class="contain">
+					<app-carousel [seriesIds]="userSeriesInfo.popular"></app-carousel>
 				</div>
 			</div>
 			<div
@@ -45,12 +44,11 @@
 				*ngIf="userSeriesInfo.popular"
 			>
 				<h2>Continuar assistindo como {{ selectedUser.name }}</h2>
-				<div class="series">
-					<div class="contain">
-						<app-carousel
-							[seriesIds]="userSeriesInfo.keepWatching"
-						></app-carousel>
-					</div>
+
+				<div class="contain">
+					<app-carousel
+						[seriesIds]="userSeriesInfo.keepWatching"
+					></app-carousel>
 				</div>
 			</div>
 		</div>
