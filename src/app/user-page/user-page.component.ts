@@ -22,6 +22,6 @@ export class UserPageComponent implements OnInit {
 
 	getUserId(n: number) {
 		this.selectedUser = JSON.stringify(this.dataUser.users[n - 1]);
-		return localStorage.setItem('user', this.selectedUser);
+		return localStorage.setItem('selectedUser', this.selectedUser);
 	}
 }
